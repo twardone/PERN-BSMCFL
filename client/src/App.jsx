@@ -1,19 +1,36 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import HomeLayout from './pages/HomeLayout'
+import {
+  HomeLayout,
+  Landing,
+  Register,
+  Login,
+  DashboardLayout,
+  Error,
+} from './pages'
 
 //this is the route to your pages.
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
-  },
-  {
-    path: '/about',
-    element: (
-      <div>
-        <h1>About Page</h1>
-      </div>
-    ),
+    children: [
+      {
+        index: true, //this is the landing page http://localhost:5173/
+        element: <Landing />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'dashboard',
+        element: <DashboardLayout />,
+      },
+    ],
   },
 ])
 
