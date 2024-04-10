@@ -13,6 +13,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true, //this is the landing page http://localhost:5173/
