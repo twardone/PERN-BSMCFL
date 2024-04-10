@@ -860,7 +860,7 @@ App.jsx
       },
 ```
 
-Dashboard.jsx
+DashboardLayout.jsx
 
 ```jsx
 import { Outlet } from 'react-router-dom'
@@ -939,7 +939,7 @@ const Wrapper = styled.section`
 export default Wrapper
 ```
 
-#### Dashboard Context
+#### DashboardLayout Context
 
 ```jsx
 import { Outlet } from 'react-router-dom'
